@@ -1,0 +1,85 @@
+#include <LiquidCrystal.h>
+#define HYSTEREZE 2
+#define rele 10
+
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int getTerm;
+int setTerm;
+unsigned long previousMillis = 0;
+const long interval = 120000;
+
+void setup() {
+  // set up the LCD's number of columns and rows:
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
+  pinMode(rele,OUTPUT);
+  getTerm = random(-5, 20);
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print("TERMOSTAT");
+  delay(2000);
+    lcd.setCursor(10, 0);
+    lcd.print(getTerm);
+    lcd.setCursor(12, 0);
+    lcd.print("C");
+
+  //lcd.clear();
+  lcd.setCursor(0, 1);
+  lcd.print("nastaveno:");
+  setTerm=13;
+    lcd.setCursor(11, 1);
+    lcd.print(setTerm);
+    lcd.setCursor(13, 1);
+    lcd.print("C");
+}
+
+void loop() {
+  if(digitalRead(8)){
+    setTerm--;
+    lcd.setCursor(11, 1);
+    lcd.print("  ");
+    lcd.setCursor(11, 1);
+    lcd.print(setTerm);
+    lcd.setCursor(13, 1);
+    lcd.print("C");
+    delay(300);
+    }
+  if(digitalRead(9)){
+    setTerm++;
+    lcd.setCursor(11, 1);
+    lcd.print("  ");
+    lcd.setCursor(11, 1);
+    lcd.print(setTerm);
+    lcd.setCursor(13, 1);
+    lcd.print("C");
+    delay(300);
+    }
+
+  if(setTerm-HYSTEREZE>=getTerm){
+    digitalWrite(rele, HIGH);
+    }else{
+     if(setTerm<=getTerm){
+        digitalWrite(rele,LOW);
+        }
+      }
+
+
+
+
+
+unsigned long currentMillis = millis();
+
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+
+      getTerm = random(-5, 20);
+      lcd.setCursor(10, 0);
+      lcd.print(getTerm);
+      lcd.setCursor(12, 0);
+      lcd.print("C");
+  }
+  
+ 
+  
+}
