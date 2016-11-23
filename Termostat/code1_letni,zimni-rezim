@@ -1,0 +1,297 @@
+// UTFT_Demo_480x320 
+// Copyright (C)2015 Rinky-Dink Electronics, Henning Karlsen. All right reserved
+// web: http://www.RinkyDinkElectronics.com/
+//
+// This program is a demo of how to use most of the functions
+// of the library with a supported display modules.
+//
+// This demo was made for modules with a screen resolution 
+// of 480x320 pixels.
+//
+// This program requires the UTFT library.
+//
+
+#include <UTFT.h>
+#include <EEPROM.h>
+#define HYSTEREZE 2
+
+// Declare which fonts we will be using
+extern uint8_t SmallFont[];
+extern uint8_t SevenSegNumFont[];
+extern uint8_t BigFont[];
+extern uint8_t SixteenSegment64x96Num;
+extern uint8_t SixteenSegment96x144Num[];
+// Set the pins to the correct ones for your development shield
+// ------------------------------------------------------------
+// Arduino Uno / 2009:
+// -------------------
+// Standard Arduino Uno/2009 shield            : <display model>,A5,A4,A3,A2
+// DisplayModule Arduino Uno TFT shield        : <display model>,A5,A4,A3,A2
+//
+// Arduino Mega:
+// -------------------
+// Standard Arduino Mega/Due shield            : <display model>,38,39,40,41
+// CTE TFT LCD/SD Shield for Arduino Mega      : <display model>,38,39,40,41
+//
+// Remember to change the model parameter to suit your display module!
+UTFT myGLCD(CTE32HR,38,39,40,41);
+int term;
+int setTerm=13;
+unsigned long previousMillis = 0;
+const long interval = 120000;
+int ledState = LOW; 
+int plus=10;
+int minus=9;
+int entr=8;
+int pomoc=0;
+int docas=90;
+int rezim;
+
+unsigned long previous = 0; 
+const long Interval = 1000;  
+
+void setup()
+{
+  randomSeed(analogRead(0));
+  
+// Setup the LCD
+  myGLCD.InitLCD();
+  myGLCD.setFont(SmallFont);
+ int buf[478];
+  int x, x2;
+  int y, y2;
+  int r;
+    pinMode(10, INPUT);
+  pinMode(9, INPUT);
+// Clear the screen and draw the frame
+ zmenaObrazu();
+      rezim=EEPROM.read(0);
+
+
+  if(rezim==1){
+      myGLCD.setFont(SevenSegNumFont);
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.print(" ", 350, 150);
+      myGLCD.setColor(0, 255, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.printNumI(setTerm, 350, 150);
+  }
+  else{
+     myGLCD.setFont(BigFont);
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.setBackColor(255, 255, 255);
+      myGLCD.print("netopime ", 300, 150);
+    
+    }
+  delay(2000);
+  term = random(0, 20);
+  funkceTeploty(term);
+  
+  //myGLCD.setFont(BigFont);
+ // myGLCD.print("C  ", 90, 100);
+}
+void(*resetFunc)(void)=0;
+void loop()
+{
+
+if(digitalRead(entr) && pomoc==0){
+  
+  myGLCD.clrScr();
+  menu();
+  pomoc=1;
+  delay(1000);
+
+  
+  }
+
+
+if(pomoc==1){
+// zmenaObrazu();
+ 
+    if(digitalRead(minus)){
+      if(docas==100)
+      trackPoint(220);
+      else
+        trackPoint(100);
+      delay(300);
+  }
+    
+  if(digitalRead(plus)){
+      if(docas==100)
+      trackPoint(220);
+      else
+        trackPoint(100);
+      delay(300);
+    }
+
+if(digitalRead(entr)){
+  if(docas==100)
+    EEPROM.write(0,0);
+    else 
+      EEPROM.write(0,1);
+   resetFunc();
+  }
+
+
+  
+    
+    
+    
+  
+}else{
+if(rezim==1){
+
+  
+
+  
+ if(setTerm-HYSTEREZE>=term){
+    blinkRing();
+    }else{
+     if(setTerm<=term){
+        myGLCD.setColor(0, 255, 0);
+        myGLCD.fillCircle(400,60, 30);
+        }
+      }
+
+
+  unsigned long currentMillis = millis();
+  
+    if (currentMillis - previousMillis >= interval) {
+      previousMillis = currentMillis;
+       term = random(0, 20);
+       funkceTeploty(term);
+    }
+
+   setTeploty();
+
+}}
+}
+
+void funkceTeploty(int teplota){
+   myGLCD.setFont(SixteenSegment96x144Num);
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.print("   ", 15, 100);
+      myGLCD.setColor(0, 255, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.printNumI(teplota, 15, 100);
+  }
+
+void zmenaObrazu(){
+  
+  myGLCD.clrScr();
+
+  myGLCD.setColor(255, 0, 0);
+  myGLCD.fillRect(0, 0, 479, 13);
+  myGLCD.setColor(64, 64, 64);
+  myGLCD.fillRect(0, 306, 479, 319);
+  myGLCD.setColor(255, 255, 255);
+  myGLCD.setBackColor(255, 0, 0);
+  myGLCD.print("TOPENI DO PSI BOUDY", CENTER, 1);
+  myGLCD.setBackColor(64, 64, 64);
+  myGLCD.setColor(255,255,0);
+  myGLCD.print("Skrobanek corporation", CENTER, 307);
+
+  myGLCD.setColor(0, 0, 255);
+  myGLCD.drawRect(0, 14, 479, 305);
+   
+
+  myGLCD.setColor(0,0,0);
+  myGLCD.fillRect(1,15,478,304);
+  myGLCD.setColor(0, 0, 255);
+  myGLCD.setBackColor(0, 0, 0);
+  
+  }
+
+
+void menu(){
+  myGLCD.setColor(0, 0, 255);
+  myGLCD.fillRect(100, 60, 300, 140);
+  myGLCD.fillRect(100, 180, 300, 260);
+  myGLCD.setFont(BigFont);
+  myGLCD.setColor(255, 255, 255);
+  myGLCD.setBackColor(0, 0, 255);
+  myGLCD.print("Letni rezim", 110, 90);
+  myGLCD.print("Zimni rezim", 110, 210);
+  
+  }
+
+void trackPoint(int y){
+  
+  
+   myGLCD.setColor(0, 0, 0);
+   myGLCD.fillCircle(330, docas, 15);
+    myGLCD.setColor(255, 0, 0);
+   myGLCD.fillCircle(330, y, 15);
+   docas=y;
+  }
+
+
+void blinkRing(){
+  unsigned long current = millis();
+
+  if (current - previous >= Interval) {
+    // save the last time you blinked the LED
+    previous = current;
+
+    // if the LED is off turn it on and vice-versa:
+    if (ledState == LOW) {
+      ledState = HIGH;
+      myGLCD.setColor(255, 0, 0);
+      myGLCD.fillCircle(400,60, 30);
+    } else {
+      ledState = LOW;
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.fillCircle(400,60, 30);
+    }
+
+  }
+  }
+
+
+
+void setTeploty(){
+  if(digitalRead(minus)){
+    setTerm--;
+mensi(setTerm);
+      myGLCD.setFont(SevenSegNumFont);
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.print(" ", 350, 150);
+      myGLCD.setColor(0, 255, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.printNumI(setTerm, 350, 150);
+      delay(300);
+  }
+    
+  if(digitalRead(plus)){
+    setTerm++;
+mensi(setTerm);
+    
+      myGLCD.setFont(SevenSegNumFont);
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.print(" ", 350, 150);
+      myGLCD.setColor(0, 255, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.printNumI(setTerm, 350, 150);
+      delay(300);
+    }
+  }
+
+
+  void mensi(int teplo){
+    if(teplo<10){
+      myGLCD.setFont(SevenSegNumFont);
+      myGLCD.setColor(0, 0, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.print("   ", 350, 150);
+      myGLCD.setColor(0, 255, 0);
+      myGLCD.setBackColor(0, 0, 0);
+      myGLCD.printNumI(setTerm, 350, 150);
+      
+      
+      }
+    
+    }
