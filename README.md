@@ -29,7 +29,7 @@ Náklady na materiál potřebný pro výrobu topné jednotky je zanedbatelný a 
 UTFT.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)
 EEPROM.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)
 Wire.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/zkouska_I2C)
-
+LiquidCrystal.h[Absolute README link]https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/code1_zaklad_nastaveni_teploty)
 
 
 první pracovní schéma Termostatu(Arduino mega, lcd touch display, rf 433 mhz(radiová komunika pro odesílání i příjmání))
