@@ -24,10 +24,10 @@ Povrch trubky dosahuje za provozu velkých teplot. Proto musí být topná patro
 Jako poslední možná nevýhoda je zkrácení životnosti žárovky s ohledem na její špatné ochlazování. To je sice fakt, ale při ceně žárovky tento argument postrádá smysl. Pokud vezmeme klasickou přenosku, nebo sklepní světla s krytím IP44 ty jsou také utěsněna a sklo je špatný tepelný vodič. V našem případě je výhodné použít pro výrobu patrony co možná největší a nejdelší trubku (trubka není podmínkou). Tím dosáhneme větší plochy pro vyzařování tepla a tím snížíme tepelnou zátěž pro žárovku.
 Náklady na materiál potřebný pro výrobu topné jednotky je zanedbatelný a dá se sehnat ve šrotě.
 
-
+https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim
 #Použité knihovny(libraries)
-UTFT.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)<br>
-EEPROM.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)<br>
+UTFT.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu) [I ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim)<br>
+EEPROM.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu) [I ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim)<br>
 Wire.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/zkouska_I2C)<br>
 LiquidCrystal.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/code1_zaklad_nastaveni_teploty)<br>
 
