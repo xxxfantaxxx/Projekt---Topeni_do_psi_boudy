@@ -14,7 +14,7 @@ Základní menu se zvoleným zimním režimem a manuálím nastavením topení.<
 ![15226459_1341342819249795_230132266_n](https://cloud.githubusercontent.com/assets/14974350/20581120/0e0bcd98-b1d7-11e6-8d28-018bbf8519cc.jpg)
 
 Na tomto obrázku vidíme:<br>
-Termostat v letním režimu(v bílém proužku je nápis "netopime")
+Termostat v letním režimu(v bílém proužku je nápis "netopime")<br>
 ![15174514_1341343252583085_1297642584_n](https://cloud.githubusercontent.com/assets/14974350/20581158/5bee3c8a-b1d7-11e6-9b7e-1a818df4c993.jpg)
 
 
