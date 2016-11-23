@@ -17,5 +17,7 @@ Na tomto obrázku vidíme:<br>
 Termostat v letním režimu(v bílém proužku je nápis "netopime")<br>
 ![15174514_1341343252583085_1297642584_n](https://cloud.githubusercontent.com/assets/14974350/20581158/5bee3c8a-b1d7-11e6-9b7e-1a818df4c993.jpg)
 
-
+Na tomto obrázku vidíme:<br>
+Prozatimní zapojení tlačítek.(Plus, Minus, Menu(enter), Trackpoint posuvník)   <br>
+![15218741_1341412679242809_1209027092_n](https://cloud.githubusercontent.com/assets/14974350/20581261/11193358-b1d8-11e6-9c35-1368a7299cfb.jpg)
 
