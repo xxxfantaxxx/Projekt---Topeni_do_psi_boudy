@@ -26,8 +26,8 @@ Náklady na materiál potřebný pro výrobu topné jednotky je zanedbatelný a 
 
 https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim
 #Použité knihovny(libraries)
-UTFT.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu) [I ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim)<br>
-EEPROM.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu) [I ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim)<br>
+UTFT.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)    [I ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim)<br>
+EEPROM.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)    [I ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code1_letni%2Czimni-rezim)<br>
 Wire.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/zkouska_I2C)<br>
 LiquidCrystal.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/code1_zaklad_nastaveni_teploty)<br>
 
