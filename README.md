@@ -34,6 +34,7 @@ Wire.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_
 
 LiquidCrystal.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/code1_zaklad_nastaveni_teploty)
 
+#Schémata a použité materiály
 
 první pracovní schéma Termostatu(Arduino mega, lcd touch display, rf 433 mhz(radiová komunika pro odesílání i příjmání))
 ![received_1291220147595396](https://cloud.githubusercontent.com/assets/14974350/19142641/3c7f44ec-8b9f-11e6-8693-8e2bcb942ce1.jpeg)
