@@ -25,6 +25,11 @@ Jako poslední možná nevýhoda je zkrácení životnosti žárovky s ohledem n
 Náklady na materiál potřebný pro výrobu topné jednotky je zanedbatelný a dá se sehnat ve šrotě.
 
 
+#Použité knihovny(libraries)
+UTFT.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)
+EEPROM.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)
+Wire.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/zkouska_I2C)
+
 
 
 první pracovní schéma Termostatu(Arduino mega, lcd touch display, rf 433 mhz(radiová komunika pro odesílání i příjmání))
