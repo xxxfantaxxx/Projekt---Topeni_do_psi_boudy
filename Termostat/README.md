@@ -1,6 +1,6 @@
 #Termostat
 Na tomto obrázku vidíme:
-číslo 19 ->    naměřená teplota(v boudě) 
+číslo 19 ->    naměřená teplota(v boudě) <br>
 číslo 13 ->    námi zvolená teplota pro vytápění
 zelený kruh -> znázorňuje že topení stojí je vypnuté
 
