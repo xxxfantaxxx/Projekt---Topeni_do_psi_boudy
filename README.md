@@ -26,40 +26,35 @@ Náklady na materiál potřebný pro výrobu topné jednotky je zanedbatelný a 
 
 
 #Použité knihovny(libraries)
-UTFT.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)
-
-EEPROM.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)
-
-Wire.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/zkouska_I2C)
-
-LiquidCrystal.h[Absolute README link](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/code1_zaklad_nastaveni_teploty)
+UTFT.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)<br>
+EEPROM.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Termostat/code2_zaklad_menu)<br>
+Wire.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/zkouska_I2C)<br>
+LiquidCrystal.h[Použita ZDE!](https://github.com/xxxfantaxxx/Projekt---Topeni_do_psi_boudy/blob/master/Topeni-primo_na_boude/code1_zaklad_nastaveni_teploty)<br>
 
 #Schémata a použité materiály
 
-první pracovní schéma Termostatu(Arduino mega, lcd touch display, rf 433 mhz(radiová komunika pro odesílání i příjmání))
+první pracovní schéma Termostatu(Arduino mega, lcd touch display, rf 433 mhz(radiová komunika pro odesílání i příjmání))<br>
 ![received_1291220147595396](https://cloud.githubusercontent.com/assets/14974350/19142641/3c7f44ec-8b9f-11e6-8693-8e2bcb942ce1.jpeg)
 
-čip pro rádiovou komunikaci(na schématu nahoře vpravo)
-
+čip pro rádiovou komunikaci(na schématu nahoře vpravo)<br>
 ![fdmy7jthm8dg3ph medium](https://cloud.githubusercontent.com/assets/14974350/19142947/401bd17c-8ba1-11e6-80c1-0ff7fb94d4c0.jpg)
 
-lcd touch display(na schémau vpravo)
-
+lcd touch display(na schémau vpravo)<br>
 ![htb1ildrlfxxxxxbxxxxq6xxfxxxl](https://cloud.githubusercontent.com/assets/14974350/19143204/9627e014-8ba2-11e6-89b5-8fa296c544ab.jpg)
 
-arduino mega (na shcématu vlevo)
+arduino mega (na shcématu vlevo)<br>
 ![htb1ylrdkvxxxxcjxvxxq6xxfxxxu](https://cloud.githubusercontent.com/assets/14974350/19143258/0404e280-8ba3-11e6-9578-3fdbf0859e86.jpg)
 
 
-TFT 3.2 inch Mega Touch LCD Expansion Board Shield(pro spojení arduina(mega) a dotykového dispalye)
+TFT 3.2 inch Mega Touch LCD Expansion Board Shield(pro spojení arduina(mega) a dotykového dispalye)<br>
 ![htb1bfrwkvxxxxbexfxxq6xxfxxxs](https://cloud.githubusercontent.com/assets/14974350/19143160/4977bed8-8ba2-11e6-9207-91dca2cf2fc2.jpg)
 
 
-Zde vidíme Arduino nano 3.0 které bude použito pro chod "topení"
+Zde vidíme Arduino nano 3.0 které bude použito pro chod "topení"<br>
 ![1pcs-nano-3-0-controller-compatible-with-nano-ch340-usb-driver-no-cable-for-arduino-nano](https://cloud.githubusercontent.com/assets/14974350/19126237/5fd38e22-8b3a-11e6-9399-a80803683ea7.jpg)
 
 
-NOVÉ SCHÉMA!!!!!! termostat na boudě s relátkem ke spuštění topení
+NOVÉ SCHÉMA!!!!!! termostat na boudě s relátkem ke spuštění topení<br>
 ![termostat_bouda](https://cloud.githubusercontent.com/assets/14974350/19507637/91bfa8cc-95d4-11e6-9ac6-fcc04799b1bd.png)
 
 
