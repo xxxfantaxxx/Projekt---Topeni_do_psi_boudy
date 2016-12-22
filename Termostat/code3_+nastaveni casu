@@ -49,13 +49,13 @@ extern uint8_t SixteenSegment96x144Num[];
 
 
 
-UTFT myGLCD(CTE32HR, 38, 39, 40, 41);
+UTFT myGLCD(CTE32HR, 38, 39, 40, 41);//deklarace displaye
 int term;
 int setTerm = 13;
 unsigned long previousMillis = 0;
 const long interval = 120000;
 int ledState = LOW;
-////piny tlÄŤitek
+////piny tlačáreň
 int plus = 10;
 int minus = 9;
 int entr = 8;
@@ -148,9 +148,9 @@ void menu() {
     myGLCD.fillRect(100, 30, 380, 90);
     myGLCD.fillRect(100, 100, 380, 160);
     myGLCD.fillRect(100, 170, 380, 230);
-    myGLCD.fillRect(100, 240, 380, 300);
-
-    myGLCD.setFont(BigFont);
+    myGLCD.fillRect(100, 240, 380, 300);//čtverec
+    
+    myGLCD.setFont(BigFont);//nastaví fond
     myGLCD.setColor(255, 255, 255);
     myGLCD.setBackColor(0, 0, 255);
     myGLCD.print("Letni rezim", 110, 40);
@@ -473,7 +473,7 @@ void saveParametr() {
 void setup() {
     randomSeed(analogRead(0));
     // Setup the LCD
-    myGLCD.InitLCD();
+    myGLCD.InitLCD();//inicializace displaye
     rtc.begin();
     int buf[478];
     int x, x2;
